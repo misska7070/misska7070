@@ -1,5 +1,6 @@
 👋 Welcome to My GitHub
 🎓 About Me
+
 Hi! I’m a data science enthusiast with an academic foundation in Economics and Data Science from Italy and a CS Engineering background from India. Currently, I’m diving deeper into the practical world of data science, blending my technical skills with industry insights.
 
 🔬 What I’m Working On
