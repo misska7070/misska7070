@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closet Sage - AI Wardrobe Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="phone-container">
+        <div class="phone-screen">
+            <div class="status-bar">
+                <span>9:41</span>
+                <span>100%</span>
+            </div>
+            
+            <div class="app-content">
+                <div class="header">
+                    <h1>Closet Sage</h1>
+                    <p>Your AI wardrobe assistant</p>
+                    
+                    <div class="weather-widget">
+                        <div class="weather-info">
+                            <span>🌤️</span>
+                            <div>
+                                <div class="weather-temp">18°C</div>
+                                <div style="font-size: 12px; opacity: 0.8;">Partly cloudy</div>
+                            </div>
+                        </div>
+                        <div style="font-size: 12px;">
+                            <div>Mon, July 14</div>
+                            <div>Work meeting at 2pm</div>
+                        </div>
+                    </div>
+                    
+                    <button class="main-button" onclick="generateOutfits()">
+                        ✨ What should I wear today?
+                    </button>
+                    
+                    <div class="item-count">
+                        <span id="itemCount">12/50 items</span>
+                        <span class="premium-badge">FREE</span>
+                    </div>
+                </div>
+
+                <div id="upgradePrompt" class="upgrade-prompt" style="display: none;">
+                    <h3>🔓 Unlock Unlimited Items</h3>
+                    <p>Add unlimited clothes and get premium styling features</p>
+                    <button class="upgrade-btn" onclick="showUpgrade()">Upgrade to Pro - £4.99/mo</button>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">Your Wardrobe</div>
+                    <div class="clothing-grid">
+                        <div class="clothing-item" data-type="top" data-color="white" data-formality="casual">
+                            👕
+                            <div class="clothing-tag">White T-shirt</div>
+                        </div>
+                        <div class="clothing-item" data-type="top" data-color="blue" data-formality="formal">
+                            👔
+                            <div class="clothing-tag">Blue Shirt</div>
+                        </div>
+                        <div class="clothing-item" data-type="bottom" data-color="blue" data-formality="casual">
+                            👖
+                            <div class="clothing-tag">Jeans</div>
+                        </div>
+                        <div class="clothing-item" data-type="bottom" data-color="black" data-formality="formal">
+                            👔
+                            <div class="clothing-tag">Black Trousers</div>
+                        </div>
+                        <div class="clothing-item" data-type="outerwear" data-color="black" data-formality="casual">
+                            🧥
+                            <div class="clothing-tag">Jacket</div>
+                        </div>
+                        <div class="clothing-item" data-type="shoes" data-color="white" data-formality="casual">
+                            👟
+                            <div class="clothing-tag">Sneakers</div>
+                        </div>
+                        <div class="clothing-item" data-type="shoes" data-color="black" data-formality="formal">
+                            👞
+                            <div class="clothing-tag">Dress Shoes</div>
+                        </div>
+                        <div class="clothing-item" data-type="top" data-color="red" data-formality="casual">
+                            👘
+                            <div class="clothing-tag">Red Sweater</div>
+                        </div>
+                        <div class="clothing-item" data-type="bottom" data-color="khaki" data-formality="casual">
+                            🩳
+                            <div class="clothing-tag">Chinos</div>
+                        </div>
+                        <div class="clothing-item" data-type="accessory" data-color="brown" data-formality="casual">
+                            🎒
+                            <div class="clothing-tag">Backpack</div>
+                        </div>
+                        <div class="clothing-item" data-type="accessory" data-color="black" data-formality="formal">
+                            👜
+                            <div class="clothing-tag">Briefcase</div>
+                        </div>
+                        <div class="clothing-item add-item" onclick="addClothingItem()">
+                            +
+                        </div>
+                    </div>
+                </div>
+
+                <div id="outfitSuggestions" class="outfit-suggestions">
+                    <div class="section">
+                        <div class="section-title">Today's Outfit Suggestions</div>
+                        <div id="outfitList"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-nav">
+                <div class="nav-item active">
+                    <span>👕</span>
+                    <small>Wardrobe</small>
+                </div>
+                <div class="nav-item">
+                    <span>📷</span>
+                    <small>Add Item</small>
+                </div>
+                <div class="nav-item">
+                    <span>✨</span>
+                    <small>Outfits</small>
+                </div>
+                <div class="nav-item">
+                    <span>⚙️</span>
+                    <small>Settings</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
